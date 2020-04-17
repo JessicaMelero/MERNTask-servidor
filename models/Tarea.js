@@ -12,7 +12,7 @@ const TareaSchema = mongoose.Schema({
   },
   creado: {
     type: Date,
-    dafault: Date.now()
+    default: Date.now()
   },
   proyecto: {
     type: mongoose.Schema.Types.ObjectId,
