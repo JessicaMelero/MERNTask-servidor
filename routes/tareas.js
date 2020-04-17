@@ -25,7 +25,13 @@ router.get('/',
 // Actualizar tareas de proyecto
 router.put('/:id',
   auth,
-  tareaController.actualizarTareas
+  tareaController.actualizarTarea
+)
+
+// Eliminar tarea de proyecto
+router.delete('/:id',
+  auth,
+  tareaController.eliminarTarea
 )
 
 module.exports = router;
