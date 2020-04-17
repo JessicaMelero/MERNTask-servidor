@@ -4,6 +4,6 @@ const router = express.Router();
 const proyectoController = require('../controllers/proyectoController');
 
 // Crea un proyectos api/proyectos
-routes.post('/', proyectoController.crearProyecto);
+router.post('/', proyectoController.crearProyecto);
 
 module.exports = router;
