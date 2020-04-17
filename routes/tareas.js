@@ -10,7 +10,7 @@ router.post('/',
   auth,
   [
     check('nombre', 'El nombre de la tarea es obligatorio').not().isEmpty(),
-    check('proyecto', 'Es obligatorio').not().isEmpty()
+    check('proyecto', 'El proyecto es obligatorio').not().isEmpty()
 
   ],
   tareaController.crearTarea
