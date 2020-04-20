@@ -40,10 +40,10 @@ exports.obtenerTareas = async(req, res) => {
     const {proyecto} = req.query;
 
     const existeProyecto = await Proyecto.findById(proyecto);
+
     if (!existeProyecto) {
       res.status(404).json({msg: 'Proyecto no encontrado'})
     }
-
     // Revisar si el proyecto actual pretenece al usuario autenticado
     if (existeProyecto.creador.toString() !== req.usuario.id) {
       return res.status(401).send({msg: 'No autorizado'});
